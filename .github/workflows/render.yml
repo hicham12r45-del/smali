@@ -1,0 +1,41 @@
+name: Render Remotion Video
+
+on:
+  workflow_dispatch:
+    inputs:
+      composition:
+        description: 'Composition ID to render (MyComposition = 3D film, Journey2D = 2D film)'
+        required: false
+        default: 'MyComposition'
+      scale:
+        description: 'Resolution scale: 1 = 1920x1080 (final), 0.5 = quick 960x540 preview'
+        required: false
+        default: '1'
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    # the 3D film is rendered on the CPU (software WebGL), so give it plenty of time
+    timeout-minutes: 150
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Render video
+        run: npx remotion render ${{ inputs.composition || 'MyComposition' }} out/video.mp4 --scale=${{ inputs.scale || '1' }}
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: video
+          path: out/video.mp4
+          if-no-files-found: error
+          retention-days: 7

@@ -1,0 +1,25 @@
+{
+  "name": "motion-studio-uguggi",
+  "version": "0.0.1",
+  "description": "A Remotion project created with Motion Studio",
+  "scripts": {
+    "start": "remotion studio",
+    "build": "remotion render MyComposition out/video.mp4",
+    "upgrade": "remotion upgrade"
+  },
+  "dependencies": {
+    "@react-three/fiber": "^8.17.10",
+    "@remotion/cli": "4.0.220",
+    "@remotion/three": "^4.0.220",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.220",
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "@types/three": "^0.170.0",
+    "typescript": "5.6.3"
+  }
+}

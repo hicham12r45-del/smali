@@ -1,0 +1,32 @@
+// Colours match the Blender model (coralo.py) so the video and the 3D asset agree.
+export const C = {
+  bodyA: '#FF6B2E',
+  bodyB: '#FF8F3A',
+  bodyEdge: '#C9400F',
+  limb: '#F05A24',
+  pore: '#A8350F',
+  spot: '#8C3AB5',
+  eyeWhite: '#FBFBFF',
+  iris: '#4D33D9',
+  pupil: '#07070D',
+  brow: '#3B1A0E',
+  cheek: '#FF7390',
+  freckle: '#B6401A',
+  mouth: '#3A0A12',
+  mouthIn: '#5E0F1C',
+  nose: '#E5491C',
+  shorts: '#1E8C8F',
+  shortsDark: '#146467',
+  shortsWave: '#6FD8D2',
+  rope: '#D9B26A',
+  ropeDark: '#A98240',
+  hand: '#FF8A4C',
+  boot: '#6B3FD1',
+  bootCuff: '#A583F0',
+  shoe: '#8C5CE8',
+  sole: '#2A1550',
+  stem: '#2F9A3E',
+  leaf: '#58C84B',
+};
+
+export const FONT = "Cairo, 'Noto Sans Arabic', 'DejaVu Sans', sans-serif";
